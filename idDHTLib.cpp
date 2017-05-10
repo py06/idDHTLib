@@ -216,18 +216,10 @@ bool idDHTLib::acquiring() {
 int idDHTLib::getStatus() {
   return status;
 }
+
 float idDHTLib::getCelsius() {
   IDDHTLIB_CHECK_STATE;
   return temp;
-}
-
-float idDHTLib::getCelsius() {
-	IDDHTLIB_CHECK_STATE;
-	if ( isDHT22 ){
-	  return temp * 0.1;
-	} else {
-	  return (float) temp;
-	}
 }
 
 float idDHTLib::getHumidity() {
